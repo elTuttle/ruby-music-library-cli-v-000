@@ -27,7 +27,7 @@ class Song
   end
 
   def self.new_from_filename(filename)
-    filename = /^[a-zA-Z0-9\s-]+/.match(filename)
+    filename = /^[a-zA-Z0-9\s-]+/.match(filename).to_s
     artist, song, genre = filename.split(" - ")
     new_artist = Artist.new(artist)
     new_genre = Genre.new(genre)
