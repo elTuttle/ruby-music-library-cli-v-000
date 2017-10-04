@@ -20,10 +20,20 @@ class MusicLibraryController
 
     input = gets.chomp
     until input == "exit"
+      
+        
 
       input = gets.chomp
     end
+  end
 
+  def list_songs
+    counter = 1
+    Song.all.name.sort.each do |song|
+      puts "#{counter}. #{song}"
+      counter += 1
+    end
+    
   end
 
 end
