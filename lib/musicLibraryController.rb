@@ -12,11 +12,10 @@ class MusicLibraryController
 
 
     do
-      
       input = gets.chomp
     end  while input != "exit"
-    
-    
+
+
   end
 
 end
