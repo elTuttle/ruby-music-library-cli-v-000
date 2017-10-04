@@ -32,8 +32,8 @@ class Song
     new_song = self.find_or_create_by_name(song)
     new_artist = Artist.new(artist)
     new_genre = Genre.new(genre)
-    puts new_artist
-    puts new_genre
+    puts new_artist.name
+    puts new_genre.name
   end
 
   def artist
