@@ -43,7 +43,7 @@ class MusicLibraryController
     end
   end
 
-  def list_artists
+  def list_genres
     temp_array = Genre.all.sort { |aname, bname| aname.name <=> bname.name }
 
     temp_array.each_with_index do |val,index|
