@@ -23,6 +23,21 @@ class MusicLibraryController
       if input == "list songs"
         list_songs
       end
+      if input == "list artists"
+        list_songs
+      end
+      if input == "list genres"
+        list_songs
+      end
+      if input == "list artist"
+        list_songs
+      end
+      if input == "list genre"
+        list_songs
+      end
+      if input == "play song"
+        list_songs
+      end
       input = gets.chomp
     end
   end
