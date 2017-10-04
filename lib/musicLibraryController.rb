@@ -9,13 +9,12 @@ class MusicLibraryController
 
   def call
     puts "Welcome to your music library!"
-
+    
+    input = gets.chomp
     until input == "exit"
-      
-    end
-      input = gets.chomp
-    end  input != "exit"
 
+      input = gets.chomp
+    end
 
   end
 
