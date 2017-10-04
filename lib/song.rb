@@ -30,8 +30,8 @@ class Song
     filename = /^[a-zA-Z0-9\s-]+/.match(filename).to_s
     artist, song, genre = filename.split(" - ")
     new_song = self.find_or_create_by_name(song)
-    new_song.artist = artist
-    new_song.genre = new_genre
+    new_song.artist = Artist.find_or_create_by_name(artist)
+    new_song.genre = Genre.find_or_create_by_name(genre)
     new_song
   end
 
