@@ -57,7 +57,10 @@ class MusicLibraryController
     if Artist.find_by_name(input) != nil
       temp_artist= Artist.find_by_name(input)
       temp_array = temp_artist.songs.sort { |aname, bname| aname.name <=> bname.name }
-    end  
+      temp_array.each_with_index do |val,index|
+        puts "#{index+1}. #{val.name}"
+      end
+    end
   end
 
   def list_songs_by_genre
@@ -67,4 +70,3 @@ class MusicLibraryController
   end
 
 end
-
