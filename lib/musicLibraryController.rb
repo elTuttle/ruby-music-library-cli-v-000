@@ -20,8 +20,8 @@ class MusicLibraryController
 
     input = gets.chomp
     until input == "exit"
-      
-        
+
+
 
       input = gets.chomp
     end
@@ -29,11 +29,11 @@ class MusicLibraryController
 
   def list_songs
     counter = 1
-    Song.all.name.sort.each do |song|
-      puts "#{counter}. #{song}"
+    Song.all.sort.each do |song|
+      puts "#{counter}. #{song.name}"
       counter += 1
     end
-    
+
   end
 
 end
