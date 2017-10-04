@@ -70,7 +70,7 @@ class MusicLibraryController
       temp_genre= Genre.find_by_name(input)
       temp_array = temp_genre.songs.sort { |aname, bname| aname.name <=> bname.name }
       temp_array.each_with_index do |val,index|
-        puts "#{index+1}. #{val.name} - #{val.genre.name}"
+        puts "#{index+1}. #{val.artist.name} - #{val.name}"
       end
     end
   end
