@@ -30,10 +30,8 @@ class MusicLibraryController
   def list_songs
     temp_array = Song.all.sort { |aname, bname| aname.name <=> bname.name }
 
-    puts temp_array
-
     temp_array.each_with_index do |val,index|
-      puts "#{index+1}. #{val}"
+      puts "#{index+1}. #{val.artist}"
     end
 
 
