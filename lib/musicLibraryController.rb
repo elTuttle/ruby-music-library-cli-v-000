@@ -33,7 +33,7 @@ class MusicLibraryController
     temp_array.each_with_index do |val,index|
       puts "#{index+1}. #{val.artist.name} - #{val.name} - #{val.genre.name}"
     end
-    
+
   end
 
   def list_artists
@@ -84,9 +84,9 @@ class MusicLibraryController
 
       temp_array.each_with_index do |val,index|
         if index+1 == input
-          puts val
+          puts "Playing #{val.name} by #{val.artist.name}"
         end
-      end      
+      end
     end
   end
 
