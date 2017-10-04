@@ -30,7 +30,7 @@ class MusicLibraryController
   def list_songs
     counter = 1
     Song.all.each do |song|
-      puts song
+      puts song.name
       counter += 1
     end
 
