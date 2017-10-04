@@ -55,8 +55,9 @@ class MusicLibraryController
     puts "Please enter the name of an artist:"
     input = gets.chomp
     if Artist.find_by_name(input) != nil
-    
-    
+      temp_artist= Artist.find_by_name(input)
+      temp_array = temp_artist.songs.sort { |aname, bname| aname.name <=> bname.name }
+    end  
   end
 
   def list_songs_by_genre
@@ -66,3 +67,4 @@ class MusicLibraryController
   end
 
 end
+
