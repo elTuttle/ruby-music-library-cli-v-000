@@ -29,11 +29,12 @@ class Song
   def self.new_from_filename(filename)
     filename = /^[a-zA-Z0-9\s-]+/.match(filename).to_s
     artist, song, genre = filename.split(" - ")
-    new_song = self.find_or_create_by_name(song)
     new_artist = Artist.new(artist)
     new_genre = Genre.new(genre)
-    puts new_artist.name
-    puts new_genre.name
+    new_song = self.find_or_create_by_name(song)
+    new_song.artist = new_artist
+    new_song.genre = new_genre
+    new_song
   end
 
   def artist
