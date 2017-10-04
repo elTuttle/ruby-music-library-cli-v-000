@@ -28,11 +28,7 @@ class MusicLibraryController
   end
 
   def list_songs
-    counter = 1
-    Song.all.each do |song|
-      puts song.name
-      counter += 1
-    end
+    temp_array = Song.all.sort { |aname, bname|  }
 
   end
 
