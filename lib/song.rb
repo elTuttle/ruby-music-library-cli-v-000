@@ -32,8 +32,8 @@ class Song
     new_artist = Artist.new(artist)
     new_genre = Genre.new(genre)
     new_song = self.find_or_create_by_name(song)
-    new_song.artist = new_artist
-    new_song.genre = new_genre
+    @artist = new_artist
+    @genre = new_genre
     new_song
   end
 
